@@ -17,5 +17,8 @@ public class HomePage extends JFrame{
        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
        frame.setLocationRelativeTo(null);
        frame.setLayout(new FlowLayout(600, 300, 150));
+       JButton button1 = new JButton("          play      ");
+       button1.setBackground(Color.yellow);
+       
   }
 }
