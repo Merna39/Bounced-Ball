@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class HomePage extends JFrame{
-
-
+  
+  public HomePage (GamePlay gamePlay){
+  
+  
+  }
 }
