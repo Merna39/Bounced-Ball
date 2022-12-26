@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Final_project;
 
 import java.awt.Color;
@@ -24,16 +20,15 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
     private int score = 0;
     private Timer timer;
     private int delay = 8;
-    private int playerX= 310;
-    private int ballposY= 120;
-    private int ballposX= 350;
+    private int playerX= 350;
+    private int ballposY= 400;
+    private int ballposX= 400;
      private int ballXdir= -1;
       private int ballYdir= -2;
       
       
       
       public Gameplay(){
-//          map=new MapGenerator(3,7);
 		 addKeyListener(this);
 		 setFocusable(true);
 		 setFocusTraversalKeysEnabled(false);
@@ -46,24 +41,24 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
           
           //background
            g.setColor(Color.LIGHT_GRAY);
-           g.fillRect(1,1,692,592);
+           g.fillRect(1,1,1000,700);
            
             //drawing map
             
             
              //borders
 	    g.setColor(Color.white);
-            g.fillRect(0,0,3,592);
-	    g.fillRect(0,0,692,3);
-	    g.fillRect(691,0,3,592);
+            g.fillRect(0,0,3,792);
+	    g.fillRect(0,0,992,3);
+	    g.fillRect(991,0,3,792);
             
             //the paddle
 		 g.setColor(Color.GRAY);
-		 g.fillRect(playerX,550,100,8);
+		 g.fillRect(playerX,600,150,12);
                  
                  //the ball
 		 g.setColor(Color.BLACK);
-		 g.fillOval(ballposX,ballposY,20,20);
+		 g.fillOval(ballposX,ballposY,25,25);
                  g.dispose();
       }
       
