@@ -25,7 +25,7 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
     private int ballposX= 400;
      private int ballXdir= -1;
       private int ballYdir= -2;
-      
+      private MapGenerator map;
       
       
       public Gameplay(){
@@ -34,6 +34,7 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
 		 setFocusTraversalKeysEnabled(false);
 	 timer=new Timer(delay,this);
 	 timer.start();
+	 map=new MapGenerator(3,7);
       }
       
       
@@ -44,7 +45,7 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
            g.fillRect(1,1,1000,700);
            
             //drawing map
-            
+             map.draw((Graphics2D)g);
             
              //borders
 	    g.setColor(Color.white);
