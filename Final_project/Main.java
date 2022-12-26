@@ -12,9 +12,7 @@ public class Main {
        theFrame.setBounds(10,10,1000,700);
         theFrame.setResizable(false);
         theFrame.setLocation(300, 300);
-        theFrame.add(gamePlay);
-        theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        theFrame.setVisible(true);
+        
 
     }
 }
