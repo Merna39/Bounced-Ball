@@ -9,8 +9,13 @@ import javax.swing.*;
 
 public class HomePage extends JFrame{
   
-  public HomePage (GamePlay gamePlay){
-  
-  
+  public HomePage (GamePlay gamePlay){ 
+    
+    JFrame frame = new JFrame ("   ");
+       frame.setSize(700 , 600);
+       frame.setVisible(true);
+       frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+       frame.setLocationRelativeTo(null);
+       frame.setLayout(new FlowLayout(600, 300, 150));
   }
 }
