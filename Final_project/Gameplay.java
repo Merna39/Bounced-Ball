@@ -10,22 +10,20 @@ import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-/**
- *
- * @author Merna
- */
+
 public class Gameplay extends JPanel implements KeyListener , ActionListener{
 
     private boolean play = false;
     private int score = 0;
     private Timer timer;
     private int delay = 8;
-    private int playerX= 350;
-    private int ballposY= 400;
-    private int ballposX= 400;
+    private int playerX= 310;
+    private int ballposY= 120;
+    private int ballposX= 350;
      private int ballXdir= -1;
       private int ballYdir= -2;
       private MapGenerator map;
+       private int totalBricks=21;
       
       
       public Gameplay(){
@@ -42,24 +40,24 @@ public class Gameplay extends JPanel implements KeyListener , ActionListener{
           
           //background
            g.setColor(Color.LIGHT_GRAY);
-           g.fillRect(1,1,1000,700);
+           g.fillRect(1,1,692,592);
            
             //drawing map
              map.draw((Graphics2D)g);
             
              //borders
-	    g.setColor(Color.white);
-            g.fillRect(0,0,3,792);
+	    g.setColor(Color.PINK);
+            g.fillRect(0,0,3,592);
 	    g.fillRect(0,0,992,3);
-	    g.fillRect(991,0,3,792);
+	    g.fillRect(691,0,3,592);
             
             //the paddle
-		 g.setColor(Color.GRAY);
-		 g.fillRect(playerX,600,150,12);
+		 g.setColor(Color.black);
+		 g.fillRect(playerX,550,100,8);
                  
                  //the ball
-		 g.setColor(Color.BLACK);
-		 g.fillOval(ballposX,ballposY,25,25);
+		 g.setColor(Color.MAGENTA);
+		 g.fillOval(ballposX,ballposY,20,20);
                  g.dispose();
       }
       
